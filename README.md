@@ -71,6 +71,131 @@ npm run test
 - `assets/`: Static assets and styles.
 - `tests/`: Unit and integration tests.
 
+### Api
+
+Download Mockoon app at https://mockoon.com/
+
+Here is the Mockoon API documentation based on the provided configuration JSON files:
+
+# Mockoon API Documentation
+
+## Overview
+
+**API Title**: Demo API  
+**API Version**: 1.0.0  
+**Base URL**: http://localhost:3030/api
+
+## General Configuration
+
+### Settings
+
+- **Max Logs Per Environment**: 100
+- **Truncate Route Name**: True
+- **Main Menu Size**: 270
+- **Secondary Menu Size**: 320
+- **Faker Locale**: pt_BR
+- **Storage Pretty Print**: True
+- **File Watcher Enabled**: Disabled
+- **Log Transactions**: False
+- **Environment Variables Prefix**: MOCKOON_
+- **Enable Telemetry**: True
+
+### Environments
+
+- **Active Environment UUID**: 05af6b36-2eb0-49df-b5fe-655a9004d85e
+- **Start Environments on Load**: False
+
+## Environment: Demo API
+
+- **UUID**: 05af6b36-2eb0-49df-b5fe-655a9004d85e
+- **Name**: Demo API
+- **Endpoint Prefix**: /api
+- **Latency**: 0 ms
+- **Port**: 3030
+- **CORS Enabled**: Yes
+
+### Headers
+
+- **Content-Type**: application/json
+- **Access-Control-Allow-Origin**: *
+- **Access-Control-Allow-Methods**: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+- **Access-Control-Allow-Headers**: Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With
+
+## Routes
+
+### Route: /api/professionals
+
+- **Type**: CRUD
+- **Method**: (All)
+- **Endpoint**: /professionals
+- **Responses**:
+
+#### Response: 200 OK
+
+- **UUID**: 70572c9d-795d-4425-953d-f2f1ced9d330
+- **Body Type**: DATABUCKET
+- **Databucket ID**: zptg
+- **Headers**:
+  - Access-Control-Allow-Origin: *
+  - Access-Control-Allow-Methods: *
+  - Access-Control-Allow-Headers: *
+  - Access-Control-Max-Age: 0
+
+## Data
+
+### Data Bucket: Professionals
+
+- **UUID**: c672be62-2921-4335-beab-0e2f6233685a
+- **ID**: zptg
+- **Name**: Professionals
+- **Value**: 
+  ```json
+  [
+    {
+      "id": 1,
+      "description": "Description 1",
+      "profile": "https://image.url/1",
+      "name": "Name 1",
+      "phone": "123-456-7890",
+      "email": "email1@example.com",
+      "website": "https://website1.com",
+      "company": "Company 1",
+      "attendant": {
+        "time": 90,
+        "price": 150
+      },
+      "activity": {
+        "name": "Job Title 1",
+        "description": "Activity Description 1"
+      },
+      "address": {
+        "street": "Street 1",
+        "city": "City 1",
+        "state": "ST",
+        "zip": "12345",
+        "country": "Country 1"
+      },
+      "available_dates": [
+        {
+          "date": "2024-06-27T12:00:00.000Z"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "uuid1",
+          "name": "Testimonial Name 1",
+          "company": "Company 1",
+          "testimonial": "Testimonial 1",
+          "rating": 5,
+          "date": "2023-06-27T12:00:00.000Z"
+        }
+      ]
+    }
+  ]
+  ```
+
+This documentation provides a structured view of the Mockoon environment settings, the Demo API environment configuration, routes, and the data bucket for professionals. Adjustments can be made as needed to include more specific details or additional routes and data.
+
 ### Contributing
 
 1. Fork the repository on git@github.com:wesandradealves/desafio-conexa.git
