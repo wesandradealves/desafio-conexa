@@ -10,7 +10,7 @@ test.describe('Logo Component', () => {
       <script type="module">
         import { render } from 'react-dom';
         import React from 'react';
-        import Logo from './path-to-your-component/Logo'; // Adjust the import path
+        import Logo from '../logo'; // Adjust the import path
         const root = document.getElementById('root');
         render(<Logo className="${className}" href="${href}" />, root);
       </script>
@@ -39,7 +39,7 @@ test.describe('Logo Component', () => {
       <script type="module">
         import { render } from 'react-dom';
         import React from 'react';
-        import Logo from './path-to-your-component/Logo'; // Adjust the import path
+        import Logo from '../logo'; // Adjust the import path
         const root = document.getElementById('root');
         render(<Logo className="${className}" href="${href}" />, root);
       </script>

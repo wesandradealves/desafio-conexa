@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppBreadcrumbs from '../breadcrumbs';
+import AppBreadcrumbs from '@/components/breadcrumbs/breadcrumbs';
 
 test.describe('AppBreadcrumbs Component', () => {
   test.beforeEach(async ({ page }) => {
