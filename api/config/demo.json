@@ -1,0 +1,117 @@
+{
+  "uuid": "05af6b36-2eb0-49df-b5fe-655a9004d85e",
+  "lastMigration": 32,
+  "name": "Demo API",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 3030,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "d3f84061-3bf9-414e-b624-a012382a4705",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "professionals",
+      "responses": [
+        {
+          "uuid": "70572c9d-795d-4425-953d-f2f1ced9d330",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Max-Age",
+              "value": "0"
+            }
+          ],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "zptg",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "d3f84061-3bf9-414e-b624-a012382a4705"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "c672be62-2921-4335-beab-0e2f6233685a",
+      "id": "zptg",
+      "name": "Professionals",
+      "documentation": "",
+      "value": "[\n  {{#repeat 10}}\n    {\n      \"id\": {{add @index 1}},\n      \"description\": \"{{faker 'lorem.sentence'}}\",\n      \"profile\":\"{{faker 'image.imageUrl'}}\",\n      \"name\": \"{{faker 'person.fullName'}} \",\n      \"phone\": \"{{faker 'phone.number'}}\",\n      \"email\": \"{{faker 'internet.email'}}\",\n      \"website\": \"{{faker 'internet.url'}}\",\n      \"company\": \"{{faker 'company.name'}}\",\n      \"attendant\": {\n        \"time\": {{faker 'number.int' min=60 max=120}},\n        \"price\": {{faker 'commerce.price' min=120 max=250}}\n      },\n      \"activity\": {\n        \"name\": \"{{faker 'person.jobTitle'}}\",\n        \"description\": \"{{faker 'lorem.sentence'}}\"    \n      },\n      \"address\": {\n        \"street\": \"{{faker 'location.streetAddress'}}\",\n        \"city\": \"{{faker 'location.city'}}\",\n        \"state\": \"{{faker 'location.state' abbreviated=true}}\",\n        \"zip\": \"{{faker 'location.zipCode'}}\",\n        \"country\": \"{{faker 'location.country'}}\"   \n      },\n      \"available_dates\": [\n        {{#repeat 10}}\n          {\n            \"date\": \"{{faker 'date.future'}}\"\n          }\n        {{/repeat}}\n      ],\n      \"testimonials\": [\n        {{#repeat 10}}\n          {\n            \"id\": \"{{faker 'string.uuid'}}\",\n            \"name\": \"{{faker 'person.fullName'}}\",\n            \"company\": \"{{faker 'company.name'}}\",\n            \"testimonial\": \"{{faker 'lorem.paragraph'}}\",\n            \"rating\": {{faker 'number.int' 5}},\n            \"date\": \"{{faker 'date.past'}}\"\n          }\n        {{/repeat}}\n      ]\n    }    \n    {{#unless @last}},{{/unless}}\n  {{/repeat}}\n]"
+    }
+  ],
+  "callbacks": []
+}

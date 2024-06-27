@@ -1,0 +1,39 @@
+{
+  "welcomeShown": true,
+  "bannerDismissed": [],
+  "maxLogsPerEnvironment": 100,
+  "truncateRouteName": true,
+  "mainMenuSize": 270,
+  "secondaryMenuSize": 320,
+  "fakerLocale": "pt_BR",
+  "fakerSeed": null,
+  "lastChangelog": "8.2.0",
+  "environments": [
+    {
+      "uuid": "05af6b36-2eb0-49df-b5fe-655a9004d85e",
+      "path": "/home/wesley/snap/mockoon/common/storage/demo.json",
+      "cloud": false,
+      "lastServerHash": null
+    }
+  ],
+  "disabledRoutes": {
+    "05af6b36-2eb0-49df-b5fe-655a9004d85e": []
+  },
+  "collapsedFolders": {},
+  "enableTelemetry": true,
+  "storagePrettyPrint": true,
+  "fileWatcherEnabled": "disabled",
+  "dialogWorkingDir": "/home/wesley/snap/mockoon/common/storage",
+  "startEnvironmentsOnLoad": false,
+  "logTransactions": false,
+  "environmentsCategoriesOrder": [
+    "local",
+    "cloud"
+  ],
+  "environmentsCategoriesCollapsed": {
+    "local": false,
+    "cloud": true
+  },
+  "envVarsPrefix": "MOCKOON_",
+  "activeEnvironmentUuid": "05af6b36-2eb0-49df-b5fe-655a9004d85e"
+}
